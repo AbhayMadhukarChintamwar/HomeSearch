@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { Link ,useNavigate} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 function Signup() {
   const [formData, setFormdata] = useState({});
-  const [error, setError]=useState(null);
-  const [loading ,setLoading] = useState(false)
-  const navigate = useNavigate()
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
   const handleChange = (e) => {
     setFormdata({
       ...formData,
@@ -14,8 +14,7 @@ function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      
-      setLoading(true)
+      setLoading(true);
       const res = await fetch("/api/auth/signup", {
         method: "POST",
         headers: {
@@ -24,20 +23,19 @@ function Signup() {
         body: JSON.stringify(formData),
       });
       const data = await res.json();
-      console.log(data)
-      if (data.success===false) {
+      console.log(data);
+      if (data.success === false) {
         setLoading(false);
         setError(data.message);
         return;
-        
       }
-      setLoading(false)
-      setError(null)
+      setLoading(false);
+      setError(null);
       // console.log(data);
-      navigate('/sign-in')
-    } catch (error) {
-      setLoading(false)
-      setError(error.message)
+      navigate("/sign-in");
+    } catch (error) { 
+      setLoading(false);
+      setError(error.message);
     }
   };
 
@@ -66,8 +64,11 @@ function Signup() {
           id="password"
           onChange={handleChange}
         />
-        <button disabled={loading} className="bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80">
-          {loading?'Loading...':'SignUp'}
+        <button
+          disabled={loading}
+          className="bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80"
+        >
+          {loading ? "Loading..." : "SignUp"}
         </button>
       </form>
       <div className="flex gap-2 mt-5">
