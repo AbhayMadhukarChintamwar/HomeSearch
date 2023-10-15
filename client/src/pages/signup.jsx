@@ -34,7 +34,7 @@ function Signup() {
       setError(null);
       // console.log(data);
       navigate("/sign-in");
-    } catch (error) { 
+    } catch (error) {
       setLoading(false);
       setError(error.message);
     }
@@ -71,7 +71,7 @@ function Signup() {
         >
           {loading ? "Loading..." : "SignUp"}
         </button>
-        <OAuth/>
+        <OAuth />
       </form>
       <div className="flex gap-2 mt-5">
         <p>Have an account?</p>
