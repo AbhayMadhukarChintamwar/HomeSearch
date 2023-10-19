@@ -5,5 +5,3 @@ export default function PrivateRout() {
     const {currentUser} = useSelector((state)=>state.user)
   return currentUser? <Outlet/>:<Navigate to='/sign-in'/>
 }
-
-
