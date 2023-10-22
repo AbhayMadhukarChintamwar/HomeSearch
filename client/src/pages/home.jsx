@@ -60,6 +60,9 @@ export default function Home() {
           <br />
           We have a wide range of properties for you to choose from.
         </div>
+        <div className='text-pink-300  text-xs sm:text-sm'>
+          <span className='text-red-400 font-bold'>Warning</span> : We need to work on google account, so you can't sign in with google account. You can sign in or signup with your personal account.
+        </div>
         <Link
           to={'/search'}
           className='text-xs sm:text-sm text-blue-800 font-bold hover:underline'
