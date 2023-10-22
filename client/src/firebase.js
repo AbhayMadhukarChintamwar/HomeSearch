@@ -5,12 +5,13 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  // apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  apiKey: "AIzaSyCdIPBVUP3_wvUe3GRMOIDXbV2ob5wuNNI",
   authDomain: "homesearch-dc5ad.firebaseapp.com",
   projectId: "homesearch-dc5ad",
   storageBucket: "homesearch-dc5ad.appspot.com",
   messagingSenderId: "453111104120",
   appId: "1:453111104120:web:d845b6cc675bed0556238d"
-}; 
+};
 
 export const app = initializeApp(firebaseConfig);
