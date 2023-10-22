@@ -11,6 +11,6 @@ const firebaseConfig = {
   storageBucket: "homesearch-dc5ad.appspot.com",
   messagingSenderId: "453111104120",
   appId: "1:453111104120:web:d845b6cc675bed0556238d"
-};
+}; 
 
 export const app = initializeApp(firebaseConfig);
